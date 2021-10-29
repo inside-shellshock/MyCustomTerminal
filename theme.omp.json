@@ -63,7 +63,7 @@
             "properties": {
               "prefix": "🌐 ",
               "shell": "bash",
-              "command": "wget -q -O - ipinfo.io/ip"
+              "command": "wget --timeout=1 -q -O - ipinfo.io/ip"
             }
           }
         ]
