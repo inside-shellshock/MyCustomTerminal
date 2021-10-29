@@ -25,7 +25,14 @@
               "display_charging": true,
               "display_charged": true
             }
-          },
+          }
+        ]
+      },
+      {
+        "type":"prompt",
+        "alignment": "left",
+        "newline": false,
+        "segments": [
           {
             "type": "spotify",
             "style": "powerline",
@@ -39,7 +46,14 @@
               "stopped_icon": "\uF04D ",
               "track_separator": " - "
             }
-          },
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "newline": false,
+        "segments": [
           {
             "type": "command",
             "style": "powerline",
@@ -49,7 +63,26 @@
             "properties": {
               "prefix": "🌐 ",
               "shell": "bash",
-              "command": "wget -q -O - ipinfo.io/ip;echo ' - ' && bash /home/caos/getif.sh"
+              "command": "wget -q -O - ipinfo.io/ip"
+            }
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "newline": false,
+        "segments": [
+          {
+            "type": "command",
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#ffffff",
+            "background": "#1bb1d7",
+            "properties": {
+              "prefix": "💻 ",
+              "shell": "bash",
+              "command": "bash /home/caos/getif.sh"
             }
           }
         ]
