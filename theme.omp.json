@@ -7,20 +7,6 @@
         "newline": false,
         "segments": [
           {
-            "type": "spotify",
-            "style": "powerline",
-            "powerline_symbol": "\uE0B0",
-            "foreground": "#ffffff",
-            "background": "#1BD760",
-            "properties": {
-              "prefix": "\uF9C6 ",
-              "playing_icon": "\uE602 ",
-              "paused_icon": "\uF8E3 ",
-              "stopped_icon": "\uF04D ",
-              "track_separator": " - "
-            }
-          },
-          {
             "type": "battery",
             "style": "powerline",
             "powerline_symbol": "\uE0B0",
@@ -41,15 +27,29 @@
             }
           },
           {
-            "type": "command",
+            "type": "spotify",
             "style": "powerline",
             "powerline_symbol": "\uE0B0",
             "foreground": "#ffffff",
             "background": "#1BD760",
             "properties": {
+              "prefix": " \uF9C6 ",
+              "playing_icon": "\uE602 ",
+              "paused_icon": "\uF8E3 ",
+              "stopped_icon": "\uF04D ",
+              "track_separator": " - "
+            }
+          },
+          {
+            "type": "command",
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#ffffff",
+            "background": "#1bb1d7",
+            "properties": {
               "prefix": "🌐 ",
               "shell": "bash",
-              "command": "wget -q -O - ipinfo.io/ip"
+              "command": "wget -q -O - ipinfo.io/ip;echo ' -'  $(ipconfig.exe | grep 'DockingETH' -A4 | cut -d':' -f 2 | tail -n1 | sed -e 's/\\s*//g');"
             }
           }
         ]
