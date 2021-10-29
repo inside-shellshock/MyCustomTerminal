@@ -1,0 +1,157 @@
+{
+    "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+    "blocks": [
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "newline": false,
+        "segments": [
+          {
+            "type": "spotify",
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#ffffff",
+            "background": "#1BD760",
+            "properties": {
+              "prefix": "\uF9C6 ",
+              "playing_icon": "\uE602 ",
+              "paused_icon": "\uF8E3 ",
+              "stopped_icon": "\uF04D ",
+              "track_separator": " - "
+            }
+          },
+          {
+            "type": "battery",
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#193549",
+            "background": "#ffeb3b",
+            "properties": {
+              "battery_icon": "",
+              "discharging_icon": "🔌 ",
+              "charging_icon": "⚡ ",
+              "charged_icon": "🔋 ",
+              "color_background": true,
+              "charged_color": "#4caf50",
+              "charging_color": "#ffe240",
+              "discharging_color": "#ff5722",
+              "postfix": "\uF295 ",
+              "display_charging": true,
+              "display_charged": true
+            }
+          },
+          {
+            "type": "command",
+            "style": "powerline",
+            "powerline_symbol": "\uE0B0",
+            "foreground": "#ffffff",
+            "background": "#1BD760",
+            "properties": {
+              "prefix": "🌐 ",
+              "shell": "bash",
+              "command": "wget -q -O - ipinfo.io/ip"
+            }
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "type":"text",
+            "style": "plain",
+            "foreground": "lightBlue",
+            "properties": {
+              "prefix": "",
+              "text": "😃"
+            }
+          },
+            {
+              "type": "root",
+              "style": "plain",
+              "powerline_symbol": "\uF0E7",
+              "foreground": "red",
+              "properties": {
+                "prefix":"",
+                "root_icon": "\b\b\b💀 ",
+                "postfix":""
+              }
+            },
+          {
+            "type": "session",
+            "style": "plain",
+            "properties": {
+              "user_info_separator": " <darkGray>@</> ",
+              "prefix": "",
+              "user_color": "cyan",
+              "host_color": "green"
+            }
+          },
+          {
+            "type": "path",
+            "style": "plain",
+            "foreground": "lightYellow",
+            "properties": {
+              "prefix": "<darkGray>in </>",
+              "style": "full"
+            }
+          },
+          {
+            "type": "git",
+            "style": "plain",
+            "properties": {
+              "prefix": "<darkGray>on</> <white>git:</>"
+            }
+          },
+          {
+            "type": "time",
+            "style": "plain",
+            "foreground": "darkGray",
+            "properties": {
+              "prefix": "[",
+              "postfix": "]"
+            }
+          },
+          {
+            "type": "exit",
+            "style": "plain",
+            "foreground": "red",
+            "properties": {
+              "prefix": " C:",
+              "always_numeric": true
+            }
+          }
+        ]
+      },
+      {
+        "type": "prompt",
+        "alignment": "left",
+        "newline": true,
+        "segments": [
+          {
+            "type": "text",
+            "style": "plain",
+            "foreground": "lightRed",
+            "properties": {
+              "prefix": "",
+              "text": "$",
+              "postfix": ""
+            }
+          },
+          {
+            "type": "root",
+            "style": "plain",
+            "foreground": "lightRed",
+            "properties": {
+              "prefix": "",
+              "root_icon": "\b\b#",
+              "postfix": ""
+            }
+          }
+        ]
+      }
+    ],
+    "final_space": true
+  }
