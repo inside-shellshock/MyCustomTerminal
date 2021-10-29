@@ -3,9 +3,13 @@ check_eth=$(ipconfig.exe | grep 'EthernetDell' -A4 | cut -d":" -f 2 | tail -n1 |
 check_dock_eth=$(ipconfig.exe | grep 'DockingETH' -A4 | cut -d":" -f 2 | tail -n1 | sed -e 's/\s*//g')
 if [[ -z $check_wifi ]]; then
         if [[ -z $check_eth ]]; then
-                 echo $check_dock_eth;
+                if [[ -z $check_dock_eth ]]; then
+                        echo Offline
+                else
+                        echo $check_dock_eth;
+                fi
         else
-                echo $check_eth;
+                echo $check_eth
         fi
 else
         echo $check_wifi;
