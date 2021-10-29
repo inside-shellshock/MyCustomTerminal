@@ -49,7 +49,7 @@
             "properties": {
               "prefix": "🌐 ",
               "shell": "bash",
-              "command": "wget -q -O - ipinfo.io/ip;echo ' -'  $(ipconfig.exe | grep 'DockingETH' -A4 | cut -d':' -f 2 | tail -n1 | sed -e 's/\\s*//g');"
+              "command": "wget -q -O - ipinfo.io/ip;echo ' - ' && bash /home/caos/getif.sh"
             }
           }
         ]
